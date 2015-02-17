@@ -1,0 +1,414 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Applause - HTML presentations powered by AngularJS</title>
+  <meta name="description" content="HTML presentations powered by Angular JS">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="assets/styles/applause.css">
+  <link rel="stylesheet" href="assets/theme/default.css">
+  <!-- Chrome print bug. Credits to @hakimel http://goo.gl/rGoUvj -->
+  <script>
+    if( window.location.search.match(/pdf/gi) ) {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = 'assets/styles/pdf.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    }
+  </script>
+</head>
+<body ng-app="applauseApp" ng-keyup="keyup($event)">
+  <div id="presentation" ng-controller="DeckCtrl" ng-cloak>
+    <goto class="ph"></goto>
+    <div class="container">
+      <!-- =========== SLIDE =========== -->
+      <slide bg-img="compasso.jpg">
+        <div class="overlay">
+        </div>
+        <div class="abs-center">
+          <h1 class="shadow">You can build the web with these tools</h1>
+        </div>
+        <span class="follow bottom-right">
+          <img class="round" src="assets/theme/images/radel.jpeg"> Marco Bonomo
+          <a href="http://www.twitter.com/radel">@radel</a>
+        </span>
+        <note>This is what is called a speaker note!</note>
+      </slide>
+
+      <slide bg-img="unicorn.png">
+        <h4 class="light-text">Conosco la senzazione</h4>
+        <note>This is the second note</note>
+      </slide>
+      <slide bg-img="unicorn2.png">
+      </slide>
+      <slide>
+        <div class="abs-center">
+          <h3 class="center">Per sopravvivere dobbiamo conoscere i nostri strumenti</h3>
+        </div>
+      </slide>
+      <slide>
+        <div class="abs-center">
+          <h3 class="center">e cominciare ad <i>amarli</i></h3>
+        </div>
+      </slide>
+      <slide class="black">
+        <h2 class="center">frontend tools</h2>
+        <table>
+          <tr>
+            <td class="text-center"><img src="assets/theme/images/browser.png" class="img-shadow" alt=""/ width="400">
+              <h3 class="text-center"><span class="yellow">Browser</span> + devtools</h3>
+            </td>
+            <td class="text-center"><img src="assets/theme/images/sublime.png" class="img-shadow" width="400" alt=""/>
+              <h3 class="text-center"><span class="red">Editor di testo</span></h3>
+            </td>
+            <td class="text-center"><img src="assets/theme/images/terminale.png" class="img-shadow" width="300" alt=""/>
+              <h3 class="text-center"><span class="blue">Terminale</span></h3>
+            </td>
+          </table>
+        </slide>
+        <slide>
+          <h2 class="yellow">Browser</h2>
+          <div class="abs-center">
+            <h3>Livereload</h3>
+            <img src="assets/theme/images/livereload.webp" width="500">
+            <h5><a class="red" href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei">Estensione per chrome/firefox</a> che aggiorna il browser ogni volta che si modifica un file</h5>
+          </div>
+          <note>Come? lo vedremo!</note>
+        </slide>
+        <slide>
+          <h2 class="yellow">Devtools</h2>
+          <div class="abs-center">
+            <h3>Breakpoints / Devices</h3>
+            <img src="assets/theme/images/devices-devtools.png" class="img-shadow" alt=""/ width="650">
+          </div>
+        </slide>
+        <slide>
+          <h2 class="yellow">Devtools</h2>
+          <div class="abs-center">
+            <h3>audits</h3>
+            <img src="assets/theme/images/audits.png" class="img-shadow" alt=""/ width="650">
+          </div>
+        </slide>
+        <slide>
+          <h2 class="red">sublime text</h2>
+          <div class="abs-center">
+            <h3>Shortcuts</h3>
+            <ul class="small">
+            <li><span class="key dark-keys">&#x2318;</span> + <span class="key dark-keys">&#x21E7;</span> + <span class="key dark-keys">p</span> Console di comando (<small>installa pacchetti, reindenta codice, lancia la compilazione</small>)
+            <li><span class="key dark-keys">&#x21E7;</span> + <span class="key dark-keys">p</span> vai al file (cerca mentre scrivi)</li>
+              <li><span class="key dark-keys">&#x2318;</span> + <span class="key dark-keys">d</span> seleziona l'occorrenza successiva (multicursore)</li>
+              <li><span class="key dark-keys">&#x2325</span> + <span class="key dark-keys">&#x21E7;</span> + <span class="key dark-keys">w</span> seleziona tutto il contenuto di un tag</li>
+            </ul>
+          </div>
+        </slide>
+        <slide>
+          <h2 class="red">sublime text</h2>
+          <div class="abs-center">
+            <h3>Gutter Color</h3>
+            <img src="assets/theme/images/guttercolor.png" class="img-shadow" alt=""/ width="650">
+          </div>
+        </slide>
+        <slide>
+          <h2 class="red">sublime text</h2>
+          <div class="abs-center">
+            <h3>Emmett</h3>
+            <code prism class="language-markup">
+              div.row>.small-12.columns>p>a.button
+            </code>
+            <code prism class="language-markup">
+              &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;small-12 columns&quot;&gt;
+              &lt;p&gt;&lt;a href=&quot;&quot; class=&quot;button&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;/div&gt;
+            </code>
+          </div>
+        </slide>
+        <slide>
+          <h2 class="red">sublime text</h2>
+          <div class="abs-center">
+            <h3 class="yellow">SublimeLinter</h3>
+            <h4>Trovare un punto e virgola mancante non dovrebbe essere un'operazione di 45 minuti.</h4>
+            <h5 class="green">Inoltre, un buon linter può insegnarvi una cosa o due su come strutturare i vostri file ;)</h5>
+          </div>
+        </slide>
+        <slide>
+          <h2 class="blue">terminale</h2>
+          <div class="abs-center">
+            <h4>Alcuni pensano di poter sviluppare per il web senza mai avere a che fare con un terminale.</h4>
+          </div>
+        </slide>
+        <slide>
+          <div class="abs-center">
+            <h2>si sbagliano.</h2>
+          </div>
+        </slide>
+        <slide bg-img="yoda.jpg">
+          <div class="overlay"></div>
+          <div class="abs-center">
+            <h4>perché mio alleato è la <i>Shell</i>, ed un potente alleato essa è!</h4>
+            <h5>una shell permette di essere più veloci</h5>
+            <h5>Inoltre, i comandi all'interno di una shell si possono <i>automatizzare</i></h5>
+          </div>
+        </slide>
+        <slide>
+          <h3><a href="https://github.com/revans/bash-it" class="yellow">Bash-it </a> / <a href="https://github.com/robbyrussell/oh-my-zsh" class="yellow">Oh-my-zsh</a></h3>
+          <div class="abs-center">
+            <code prism class="language-markup">marco@hoth 07:15:28 ~/vagrant-local |local-dev ✓| → </code>
+            <br>
+            <h4>Aggiungono alias, autocompletamento e plugin per applicazioni e linguaggi</h4>
+            <h4><span class="red">Git</span>
+              <span class="rainbow pink">Vagrant</span>
+              <span class="rainbow blue">Docker</span>
+              <span class="rainbow yellow">ssh</span>
+              <span class="rainbow red">nginx</span>
+            </h4>
+          </div>
+          <note>possiamo fare alcune cose per renderla meno "paurosa"</note>
+        </slide>
+        <slide>
+          <h3><a href="https://github.com/arialdomartini/oh-my-git" class="yellow">Oh my git!</a></h3>
+          <div class="abs-center">
+            <h5>Quando trova un repository git cambia il prompt per darci informazioni utili</h5>
+            <img src="assets/theme/images/ohmygit.jpg" class="img-shadow" alt=""/ width="700">
+          </div>
+          <note>possiamo fare alcune cose per renderla meno "paurosa"</note>
+        </slide>
+        <slide>
+          <h2 class="blue">Terminale</h2>
+          <div class="abs-center">
+            <h3><a href="https://dotfiles.github.io" class="yellow">.dotfiles</a></h3>
+            <h5>Possiamo salvare i nostri files di configurazione su un repository git per trovarci a casa ovunque andiamo</h5>
+          </div>
+          <note>possiamo fare alcune cose per renderla meno "paurosa"</note>
+        </slide>
+        <slide>
+          <div class="abs-center">
+            <h3>Cosa dicevi sull'automatizzare?</h3>
+          </div>
+        </slide>
+        <slide bg-color="yellow">
+          <ul class="abs-center center short">
+            <li class="rainbow red">Frameworks</li>
+            <li class="rainbow pink">Templates</li>
+            <li class="rainbow blue">Libraries</li>
+            <li class="rainbow yellow">Watch</li>
+            <li class="rainbow red">Compile</li>
+            <li class="rainbow green">Lint</li>
+            <li class="rainbow yellow">Minify</li>
+            <li class="rainbow blue">Optimize</li>
+            <li class="rainbow green">Build</li>
+            <li class="rainbow pink">Deploy</li>
+          </ul>
+        </slide>
+        <slide>
+          <div class="abs-center">
+            <table>
+              <tr>
+                <td class="text-center"><img src="assets/theme/images/yeoman.png" class="img-shadow" alt=""/ width="200">
+                  <h3 class="text-center"><span class="yellow">yeoman</span></h3>
+                </td>
+                <td class="text-center"><img src="assets/theme/images/bower.png" class="img-shadow" width="200" alt=""/>
+                  <h3 class="text-center"><span class="red">bower</span></h3>
+                </td>
+                <td class="text-center"><img src="assets/theme/images/grunt.png" class="img-shadow" width="200" alt=""/><img src="assets/theme/images/gulp.png" class="img-shadow" height="200" alt=""/>
+                  <h3 class="text-center"><span class="blue">grunt/<i>gulp</i></span></h3>
+                </td>
+              </table>
+            </div>
+          </slide>
+          <slide>
+            <div class="abs-center">
+              <h3>Alla base ci sono <span class="yellow">npm</span> e <span class="red">git</span></h3>
+              <h5>(<span class="yellow">npm</span> è il gestore di pacchetti di nodejs)</h5>
+              <h5>è come <i>apt</i> per debian o <i>gem</i> per ruby</h5>
+            </div>
+          </slide>
+          <slide>
+            <div class="abs-center">
+              <h3>package.json</h3>
+              <code prism class="language-javascript">
+        {
+          "name": "app",
+          "version": "0.1.11",
+          "repository": {
+            "type": "git",
+            "url": "https://github.com/user/app"
+          },
+          "dependencies": {},
+          "devDependencies": {
+            "browser-sync": "^1.5.1",
+            "del": "^0.1.3",
+            "gulp": "^3.8.8",
+            "gulp-autoprefixer": "^1.0.1",
+            "gulp-concat": "^2.4.1",
+            "gulp-jshint": "^1.8.4",
+            "gulp-load-plugins": "^0.6.0",
+            "gulp-sass": "^1.0.0",
+            "gulp-uglify": "^1.0.1",
+            "gulp-watch": "^1.0.7",
+          },
+          "engines": {
+            "node": ">=0.8.0"
+          }
+        }
+
+      </code>
+    </div>
+  </slide>
+  <slide>
+    <h2 class="yellow">Yeoman</h2>
+    <div class="abs-center">
+      <h3>Yeoman aiuta a inizializzare il tuo progetto (<span class="yellow">Scaffolding</span>)</h3>
+    </div>
+    <note>inizializzare fa cagarone</note>
+  </slide>
+  <slide>
+    <h2 class="yellow">Yeoman</h2>
+    <div class="abs-center">
+      <h5>
+        <code prism class="language-javascript">
+          # npm install -g yo generator-gulp-angular
+          $ yo gulp-angular
+        </code>
+        <h5>
+          <h4>boom! abbiamo il nostro progetto in <span class="red">angularJS</span> già pronto</h4>
+        </div>
+      </slide>
+      <slide>
+        <h3>gestione delle librerie old school</h3>
+        <ul class="unstyled">
+          <li class="yellow">1. Quella libreria è vecchia di 6 mesi? meglio aggiornare!</li>
+          <li class="red">2. Vai sul sito</li>
+          <li class="blue">3. Scarica al libreria</li>
+          <li class="green">4. Estrai e copia da ~/Downloads</li>
+          <li class="pink">5. Incolla nella directory della tua applicazione</li>
+          <li>6. Aggiorna i tag degli script</li>
+        </ul>
+      </slide>
+      <slide>
+        <h2 class="yellow">bower</h2>
+        <div class="abs-center">
+          <code prism class="language-javascript">
+            # npm install -g bower
+            $ bower install angular --save
+            $ bower update
+          </code>
+        </div>
+      </slide>
+      <slide>
+        <h2 class="red">Grunt</h2>
+        <div class="abs-center">
+          <h3>grunt ti aiuta ad <i>automatizzare</i> i task ripetitivi</h3>
+        </div>
+      </slide>
+      <slide>
+        <h2 class="red">Grunt</h2>
+        <div class="abs-center">
+          <ul class="unstyled">
+            <li>Linting</li>
+            <li>Compiling</li>
+            <li>Minification</li>
+            <li>Testing</li>
+            <li>Conversion</li>
+            <li>Documentation</li>
+            <li>Deployment</li>
+            <li class="yellow">& more</li>
+          </ul>
+        </div>
+      </slide>
+      <slide>
+        <h2 class="red">Grunt</h2>
+        <div class="abs-center">
+              <code prism class="language-javascript">
+  # npm install -g grunt-cli
+  $ npm install
+  $ grunt
+              </code>
+        </div>
+      </slide>
+      <slide>
+        <h2 class="red">Grunt</h2>
+        <div class="abs-center">
+          <h3>Gruntfile.js</h3>
+          <code prism class="language-javascript">
+            module.exports = function(grunt){
+            grunt.initConfig({
+            uglify: {
+            build: {
+            src: 'app.js',
+            dest: 'build/app.min.js'}
+          },
+          jshint: { all: ['**/*.js']}
+        });
+        grunt.loadNpmTasks('grunt-contrib-uglify');
+        grunt.loadNpmTasks('grunt-contrib-jshint');
+        grunt.registerTask('default', ['jshint', 'uglify']);
+      };
+    </code>
+  </div>
+</slide>
+<slide>
+  <h2 class="red">Grunt</h2>
+  <div class="abs-center">
+    <h3><span class="yellow">4,285</span> plugins and <span class="green">counting</span></h3>
+    <h4>http://gruntjs.com/plugins</h4>
+  </div>
+</slide>
+<slide>
+  <h2 class="red">Gulp</h2>
+  <div class="abs-center">
+    <h3>Gulp è più recente e fa le stesse cose di Grunt, ma con un <i>altro</i> approccio</h3>
+    <h4>(Code over configuration)</h4>
+  </div>
+</slide>
+<slide>
+  <h2 class="red">Gulp</h2>
+  <div class="abs-center">
+    <h3><span class="yellow">1,207</span> plugins and <span class="green">counting</span></h3>
+    <h4>http://gulpjs.com/plugins</h4>
+    <h4 class="yellow">quasi tutti i nuovi progetti hanno sostituito grunt con gulp</h4>
+  </div>
+</slide>
+<slide class="white">
+  <div class="abs-center">
+    <img src="assets/theme/images/twitter-best.png" class="img-shadow" width="800" alt=""/>
+  </div>
+</slide>
+<slide class="codecolor">
+  <div class="abs-center">
+    <code prism class="language-javascript">
+      $ yo angular
+      $ bower update
+      $ gulp
+    </code>
+  </div>
+</slide>
+<slide class="codecolor">
+  <div class="abs-center">
+    <h1>Enough?</h1>
+  </div>
+</slide>
+<slide>
+  <div class="abs-center">
+    <h1>WordMove</h1>
+  </div>
+</slide>
+<slide bg-img="">
+  <div class="abs-center">
+    <h1>Thank You!</h1>
+    <h3>https://github.com/radel</h3>
+    <p class="rainbow yellow">slides, demo, my dotfiles</p>
+  </div>
+</slide>
+<!-- =========== /SLIDE =========== -->
+</div>
+<flip-clock></flip-clock>
+<div id="slide-count" ng-show="{{isSlideCountVisible}}">{{$storage.currentSlide}}/{{lastSlide}}</div>
+<progress-bar class="ph" ng-show="{{isProgressBarVisible}}"></progress-bar>
+</div>
+<script src="assets/scripts/applause.js"></script>
+</body>
+</html>
