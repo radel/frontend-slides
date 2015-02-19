@@ -65,7 +65,7 @@ h2 {
 }
 
 h3 {
-  font-size: 3em;
+  font-size: 3.5em;
   color: $mainTxtColor;
   text-align: center;
   line-height: 1em;
@@ -74,7 +74,11 @@ h3 {
 }
 
 h4 {
-  font-size: 2.2em;
+  font-size: 2.5em;
+}
+
+h5 {
+  font-size: 2em;
 }
 
 .overlay {
@@ -146,7 +150,7 @@ ul {
 }
 
 i {
-  font-style: normal;
+  font-style: italic;
   font-weight: normal;
 }
 

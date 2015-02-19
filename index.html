@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Applause - HTML presentations powered by AngularJS</title>
+  <title>You can build the web with these tools - Marco Bonomo</title>
   <meta name="description" content="HTML presentations powered by Angular JS">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="assets/styles/applause.css">
@@ -38,8 +38,8 @@
       </slide>
 
       <slide bg-img="unicorn.png">
-        <h4 class="light-text">Conosco la senzazione</h4>
-        <note>This is the second note</note>
+        <h4 class="light-text"></h4>
+        <note>Conosco la sensazione...</note>
       </slide>
       <slide bg-img="unicorn2.png">
       </slide>
@@ -55,6 +55,7 @@
       </slide>
       <slide class="black">
         <h2 class="center">frontend tools</h2>
+        <br>
         <table>
           <tr>
             <td class="text-center"><img src="assets/theme/images/browser.png" class="img-shadow" alt=""/ width="400">
@@ -99,7 +100,8 @@
             <li><span class="key dark-keys">&#x2318;</span> + <span class="key dark-keys">&#x21E7;</span> + <span class="key dark-keys">p</span> Console di comando (<small>installa pacchetti, reindenta codice, lancia la compilazione</small>)
             <li><span class="key dark-keys">&#x21E7;</span> + <span class="key dark-keys">p</span> vai al file (cerca mentre scrivi)</li>
               <li><span class="key dark-keys">&#x2318;</span> + <span class="key dark-keys">d</span> seleziona l'occorrenza successiva (multicursore)</li>
-              <li><span class="key dark-keys">&#x2325</span> + <span class="key dark-keys">&#x21E7;</span> + <span class="key dark-keys">w</span> seleziona tutto il contenuto di un tag</li>
+              <li><span class="key dark-keys">&#x2325</span> + <span class="key dark-keys">&#x21E7;</span> + <span class="key dark-keys">a</span> seleziona il testo tra un tag</li>
+              <li><span class="key dark-keys">&#x2325</span> + <span class="key dark-keys">&#x21E7;</span> + <span class="key dark-keys">w</span> racchiude la selezione in un tag</li>
             </ul>
           </div>
         </slide>
@@ -149,9 +151,24 @@
           <div class="overlay"></div>
           <div class="abs-center">
             <h4>perché mio alleato è la <i>Shell</i>, ed un potente alleato essa è!</h4>
-            <h5>una shell permette di essere più veloci</h5>
+          </div>
+        </slide>
+        <slide class="codecolor">
+          <div class="abs-center">
+            <h5>una shell permette di essere più veloci</h5><br>
             <h5>Inoltre, i comandi all'interno di una shell si possono <i>automatizzare</i></h5>
           </div>
+        </slide>
+         <slide class="codecolor">
+          <h3>Alias!</h3>
+          <div class="abs-center">
+            <code prism class="language-markup">
+    alias myip='dig +short myip.opendns.com @resolver1.opendns.com'
+    alias server='gnome-terminal --window-with-profile=serverprofile -x bash -c "ssh user@server";'
+    alias rd='rmdir'
+            </code>
+          </div>
+          <note>possiamo fare alcune cose per renderla meno "paurosa"</note>
         </slide>
         <slide>
           <h3><a href="https://github.com/revans/bash-it" class="yellow">Bash-it </a> / <a href="https://github.com/robbyrussell/oh-my-zsh" class="yellow">Oh-my-zsh</a></h3>
@@ -165,6 +182,7 @@
               <span class="rainbow yellow">ssh</span>
               <span class="rainbow red">nginx</span>
             </h4>
+              <h5>(chi usa windows deve accontentarsi di <a class="yellow" href="http://bliker.github.io/cmder/">cmder</a>)</h5>
           </div>
           <note>possiamo fare alcune cose per renderla meno "paurosa"</note>
         </slide>
@@ -189,6 +207,16 @@
             <h3>Cosa dicevi sull'automatizzare?</h3>
           </div>
         </slide>
+        <slide>
+          <div class="abs-center">
+            <h3>Automatizzare è far fare alla macchina le cose <i>noiose</i> per concentrarsi sulle cose <strong>importanti</strong>.</h3>
+          </div>
+        </slide>
+        <slide>
+          <div class="abs-center">
+            <h3>Se non stai automatizzando le cose noiose stai facendo <i>troppa</i> fatica.</h3>
+          </div>
+        </slide>
         <slide bg-color="yellow">
           <ul class="abs-center center short">
             <li class="rainbow red">Frameworks</li>
@@ -204,7 +232,7 @@
           </ul>
         </slide>
         <slide>
-          <div class="abs-center">
+<br><br>
             <table>
               <tr>
                 <td class="text-center"><img src="assets/theme/images/yeoman.png" class="img-shadow" alt=""/ width="200">
@@ -217,7 +245,6 @@
                   <h3 class="text-center"><span class="blue">grunt/<i>gulp</i></span></h3>
                 </td>
               </table>
-            </div>
           </slide>
           <slide>
             <div class="abs-center">
@@ -265,7 +292,7 @@
     </div>
     <note>inizializzare fa cagarone</note>
   </slide>
-  <slide>
+  <slide class="codecolor">
     <h2 class="yellow">Yeoman</h2>
     <div class="abs-center">
       <h5>
@@ -288,7 +315,7 @@
           <li>6. Aggiorna i tag degli script</li>
         </ul>
       </slide>
-      <slide>
+      <slide class="codecolor">
         <h2 class="yellow">bower</h2>
         <div class="abs-center">
           <code prism class="language-javascript">
@@ -362,6 +389,7 @@
   <div class="abs-center">
     <h3>Gulp è più recente e fa le stesse cose di Grunt, ma con un <i>altro</i> approccio</h3>
     <h4>(Code over configuration)</h4>
+    <h4>spoiler: è più <i>veloce</i></h4>
   </div>
 </slide>
 <slide>
@@ -393,6 +421,11 @@
 </slide>
 <slide>
   <div class="abs-center">
+    <h1>Demo</h1>
+  </div>
+</slide>
+<slide>
+  <div class="abs-center">
     <h1>WordMove</h1>
   </div>
 </slide>
@@ -400,7 +433,7 @@
   <div class="abs-center">
     <h1>Thank You!</h1>
     <h3>https://github.com/radel</h3>
-    <p class="rainbow yellow">slides, demo, my dotfiles</p>
+    <p class="rainbow yellow">slides, demo, dotfiles</p>
   </div>
 </slide>
 <!-- =========== /SLIDE =========== -->
